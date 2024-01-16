@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input 
+            size="40" 
+            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+            id="claimant-name" 
+            aria-required="true" 
+            aria-invalid="false" 
+            placeholder="First Name" 
+            value="" 
+            type="text"
+            name="claiment-name">
+        <button type="button" onclick="getDataFromInput()">copy to -></button>
+        <input 
+            size="40" 
+            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" 
+            id="user-name"
+            aria-required="true" 
+            aria-invalid="false" 
+            placeholder="User First Name" 
+            value="" 
+            type="text"
+            name="user-name">
+    </form>
+
+    <hr>
+
+    <label for="">Male1</label><input type="checkbox" value="male1" id="male1">
+    <label for="">Female1</label><input type="checkbox" value="female1" id="female1">
+    <hr>
+    <label for="">Male2</label><input type="checkbox" value="male2" id="male2">
+    <label for="">Female2</label><input type="checkbox" value="female2" id="female2">
+
+    <script>
+        function getDataFromInput() {
+            let ClaimantFirstName = document.getElementById('claimant-name');
+            let UserFirstName = document.getElementById('user-name');
+            UserFirstName.value = ClaimantFirstName.value;
+
+            let male1 = document.getElementById("male1");
+            let female1 = document.getElementById('female1');
+            let male2 = document.getElementById('male2');
+            let female2 = document.getElementById('female2');
+
+            if (male1.checked === true) male2.checked = true;
+            if (female1.checked === true) female2.checked = true;
+
+            // let test = 'test';
+            // UserFirstName = 'new text';
+            // let ClaimantFirstName = document.querySelector('[name="claiment-name"]').value;
+            // let UserFirstName = document.querySelector('[name="user-name"]').value;
+            // ClaimantFirstName = UserFirstName;            
+            // document.getElementById('user-name').value = 'new text';
+            // console.log(UserFirstName);
+
+        }
+    </script>
+
+</body>
+
+</html>
