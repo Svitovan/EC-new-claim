@@ -1,1 +1,1 @@
-Code for 'New Claim' inside script.js.
+#### New Claim Form
